@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jQuery.com/jQuery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	$("div").click(function() {		//div를 눌렀을때
+		
+		$(this).find(">h3").css("background-color","pink");	//자손
+		$(this).find("li").css("background-color","lightblue");	//후손 //li 앞에 공백 안줘도됨
+		
+	});//click
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<div><!-- 기준 -->
+		<h3>제목태그1</h3><!-- 자식 -->
+		<ul><!-- 자식 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+		</ul>		
+	</div>
+	<div><!-- 기준 -->
+		<h3>제목태그1</h3><!-- 자식 -->
+		<ul><!-- 자식 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+		</ul>		
+	</div>
+	<div><!-- 기준 -->
+		<h3>제목태그1</h3><!-- 자식 -->
+		<ul><!-- 자식 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+			<li>리스트태그</li><!-- 손자후손 -->
+		</ul>		
+	</div>
+</body>
+</html>

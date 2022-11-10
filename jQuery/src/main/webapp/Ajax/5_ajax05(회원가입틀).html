@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ajax</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+	$(document).ready(function() {
+
+// 		//1.보내는 방법 기본?
+// 		$("#member").submit(function() {
+			
+// 		})//submit
+		
+// 		//2.보내는 방법
+// 		document.member.onsubmit = function(){
+			
+// 		}//document.member.onsubmit
+		
+// 		//3.보내는 방법 -> 네임으로 잡음
+// 		document.getElementById("member").onsubmit = function() {
+			
+// 		}//document.getElementById("member").onsubmit()
+		
+// 		//4.보내는 방법
+// 		$("#member").on("submit", function(){
+			
+// 		}); //$("#member").on()
+		
+// 		//5.보내는 방법
+// 		$("member").on({
+// 			"submit" : function() {
+				
+// 			}
+// 		});//객체
+		
+		
+		
+		//하나씩 받으면 each	=> json에서 사용
+		//find each => xml에서 사용
+		
+		
+		$("#member").submit(function() {
+			
+			$.ajax({		//통신하려면 반드시 객체로 들어가야함{}
+				
+				url: "data/serialize.jsp",			//serialize라는 데이터와 통신을 해서 넘겨줌
+				
+// 				data:{												//각각 하나씩 연결하니 계속 추가추가해야함
+// 					name: $("#name").val(),
+// 					tel: $("#tel").val()
+
+// 				},//data
+
+					data : $("form").serialize(),			//serialize (일련번호)폼으로 하나로 묶어 연결 
+					//serialize()메서드 : 입력양식의 내용을 요청 매개변수 문자열로 한꺼번에 전송
+					//연속극으로 방송하다, 연재하다
+				
+				success: function(result) {
+	
+					$("#txt").text(result);
+				}//success
+
+			})//ajax		//원래는 빨리 넘겨줌
+			
+			return false;	//하지만 값을 리턴실패하면 전송하기 전에 보여줌
+
+		})//submit
+		
+		
+	}); //ready
+</script>
+</head>
+
+<body>
+	<form action="#" method="post" name="member" id="member" style="width: 310px;">
+		<fieldset>
+			<legend>회원가입</legend>
+			<table>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input type="text" name="name" id="name" /></td>
+				</tr>
+				<tr>
+					<td><label for="tel">전화번호</label></td>
+					<td><input type="text" name="tel" id="tel" /></td>
+				</tr>
+				<tr style="text-align: center;">
+					<td colspan="2">
+						<input type="submit" value="확인" style="margin-top: 10px;" />
+						<input type="reset"  value="취소" style="margin-top: 10px;" />
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<h1 id="txt"></h1>
+</body>
+</html>

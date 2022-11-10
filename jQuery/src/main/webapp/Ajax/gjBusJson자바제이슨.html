@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+
+$(document).ready(function() {			//비정상적인 방법으로 접근했기때문에 오류가 뜸 => CORS 제품사용의 서비스키가 없기 때문에
+	$("#btn").click(function() {			//CORS 오류 해결 밑에 설명
+		
+		$.ajax({
+			dataType : "json",
+			url : "http://api.gwangju.go.kr/json/lineInfo",
+			success : function(data) { resultHtml(data);},
+			error : function() { alert("JSON Data Loading Error!!!");}
+		});//ajax()
+	});//click()
+}); //ready
+
+function resultHtml(data) {
+	//alert("JSON Data Loading Success!!!");
+	var html = "<table border='1'>";
+		html += "<tr>";
+		html += "<th>노선번호</th>";
+		html += "<th>출발지</th>";
+		html += "</tr>";
+		
+		$.each(data, function(key, value) {
+			if(key == "LINE_LIST"){
+				$.each(value, function(key, value) {
+					html += "<tr align='center'>";
+					html += "<td>" + value.LINE_NAME + "</td>";
+					html += "<td>" + value.DIR_UP_NAME + "</td>";
+					
+					html += "</tr>";
+				});//each()
+			}//if
+		});//each()
+		
+	 html += "</table >";
+	 $("#display").html(html);
+	 
+}//resultHtml()
+
+</script>
+</head>
+<body>
+	<button id="btn">광주광역시 버스 노선정보</button>
+	<br><br/>
+	<div id="display">
+	여기에 버스 노선 정보가 출력됩니다.
+
+	</div>
+</body>
+</html>
+
+<!-- 
+CORS 오류 해결 : 비정상적인 접근
+ 1. allow control allow origin 검색
+ 2. https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+ 3. 크롬에 추가
+ 4. 주소표시 오른쪽 상단의 확장프로그램 > C : 아이콘 클릭 > 활성화
+
+
+
+ -->
+
+
+
+

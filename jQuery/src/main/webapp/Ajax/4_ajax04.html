@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	$("#start_ajax").click(function() {		//누르면 통신시작함 
+		
+		$.ajax({		//객체로 받음
+				url: "data/data.jsp",		//컴마로 구분 세미콜론없음
+			
+				data: {
+					name : $("#name").val(),
+				},	//data
+				
+				success : function(result) { //function 안에는 기능이니까 세미콜론 들어가도 됨
+					alert("통신성공");
+					$("#txt").text("이름 : " + result);
+					
+				},//success
+				
+				error : function(xhr, status, error){
+					alert("통신실패");
+				}//error
+				
+		});	//ajax
+	});	//start_ajax click			
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<input type="text" id="name" name="name"	>
+	<button type="button" id="start_ajax">서버와 통신시작</button>
+	<p id="txt"></p>
+
+
+</body>
+</html>

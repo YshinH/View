@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><!-- 현조부모 -->
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jQuery.com/jQuery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	$("li").parents().css({		/* li의 모든 조상부모 */
+		"padding":"20px",
+		"border":"1px solid black"
+		
+	});
+	
+	$("li").parents("section").css("border-color","red");	/* li의 모든 부모중 section만 선택 */
+	$("li").parent().css("border-color","blue");	/* li의 부모ul만 선택 */
+	$("li").parentsUntil("body").css("border-style","dashed");	/* li의 부모중 body이전까지 모두선택 */
+	
+	
+	
+}); //ready
+
+</script>
+</head>
+<body><!-- 고조부모 -->
+	<section><!-- 증조부모 -->
+		<div><!-- 조부모님 -->
+			<ul><!-- 부모 -->
+				<li>리스트태그</li><!-- 기준 -->
+				<li>리스트태그</li>
+				<li>리스트태그</li>
+				<li>리스트태그</li>
+				<li>리스트태그</li>			
+			</ul>
+		</div>
+	</section>
+	<img alt="그림" src="부모조상요소.png">
+</body>
+</html>

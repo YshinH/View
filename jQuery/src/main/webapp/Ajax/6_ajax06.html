@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script>
+
+$(document).ready(function() {
+	
+	$("#start_ajax").click(function() {
+		
+		$.ajax({	//통신할거야!!
+			
+			url: "data/data.json",	//여기로 통신할거야
+					
+			success: function(result) {
+				
+				$(result).each(function(key, value) {	//키(인덱스번호)와 값으로 받자	
+					
+					$("body").append("<br />" + value.name + " : " 
+							+ value.dollar + " : " 
+							+  value.won);		//바디에 추가할거야
+					
+				});	//each
+				
+			}//success 
+			
+		});// ajax
+		
+	});//start_ajax click
+	
+	
+	
+}); //ready
+
+</script>
+</head>
+<body>
+	<button id="start_ajax">서버와 통신시작</button>
+</body>
+</html>
