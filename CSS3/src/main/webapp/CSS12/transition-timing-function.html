@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box{
+		border: 5px solid black;
+		padding: 20px;
+	}
+	
+	.box>img{
+		margin-bottom: 10px;
+		left: 0px;
+		position: relative;
+		transition-duration:1s;
+	}
+	
+	.box:hover>img {
+		left: 300px;
+	}
+
+	/* 속도감 지정 */
+	
+	.car01{
+		transition-timing-function:ease;
+	}
+	.car02{
+		transition-timing-function:ease-in;
+	}
+	.car03{
+		transition-timing-function:ease-out;
+	}
+	.car04{
+		transition-timing-function:ease-in-out;
+	}
+	.car05{
+		transition-timing-function:linear;
+	}
+
+	
+</style>
+</head>
+<body>
+	<div class="box">
+		<img alt="자동차1" src="../image/car.png" class="car01"><br/>
+		<img alt="자동차2" src="../image/car.png" class="car02"><br/>
+		<img alt="자동차3" src="../image/car.png" class="car03"><br/>
+		<img alt="자동차4" src="../image/car.png" class="car04"><br/>
+		<img alt="자동차5" src="../image/car.png" class="car05"><br/>
+		<img alt="자동차6" src="../image/car.png" class="car06"><br/>
+	
+	
+	</div>
+</body>
+</html>

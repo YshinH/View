@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*  body { */
+/* 		background-image: url("../image/cat1.png") */
+/* 요소의 배경이미지를 지정하는 속성, 값은 url()로 */
+/* 	} */ 
+
+	div {
+		width: 400px;
+		height: 120px;
+		margin-bottom: 10px;
+		border: 3px solid black;
+		background-image: url("../image/cat1.png")
+	}
+	
+	/* background-repeat : 요소의 배경이미지 반복을 지정하는 속성 */
+	.box01 {
+	 background-repeat: repeat; /* 반복, 기본값 */
+	}
+	.box02 {
+	 background-repeat: no-repeat; /* 반복안함 */
+	}
+	.box03 {
+	 background-repeat: repeat-x; /* x축만반복 */
+	}
+	.box04 {
+	 background-repeat: repeat-y; /* y축만 반복 */
+	}
+	.box05 {
+	 background-repeat: space; /* 잘리는 것 없이 처리, 비율고정여백으로 처리 */
+	}
+	.box06 {
+	 background-repeat: round; /* 잘리는 것 없이 처리, 그림비율변경으로 처리 */
+	}
+
+</style>
+</head>
+<body>
+	<div class="box01"></div>
+	<div class="box02"></div>
+	<div class="box03"></div>
+	<div class="box04"></div>
+	<div class="box05"></div>
+	<div class="box06"></div>
+</body>
+</html>

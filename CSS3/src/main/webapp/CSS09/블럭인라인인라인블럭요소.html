@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	h1, p, li, a, span, img {
+		background-color: orange;
+		width: 200px;
+		height: 200px;
+	}
+	/* display : 요소의 표시속성을 변경 */
+	
+	li {
+		display: inline; /* inline요소로 변경 */
+	}
+	
+	a {								/* inline-block요소로 변경 */
+		display: inline-block;
+		text-align: center;
+		line-height: 200px;
+		text-decoration: none;
+		color: black;
+	}
+	
+	
+	img {
+		display: block;	/* block 요소로 변경 */
+	}
+	
+	p:hover {
+		display: none;	/* 흔적자체도 없앰 */
+		
+	}
+	
+</style>
+</head>
+<body>
+	<!-- 블럭요소 : 수직나열, 영역가질수 있음 -->
+	<h1>제목태그</h1>
+	<p>문단태그</p>
+	<ul>
+		<li>리스트태그</li>
+		<li>리스트태그</li>
+		<li>리스트태그</li>	
+	</ul>
+	<hr />
+	
+	<!-- 인라인요소 : 수평나열, 영역가질 수 없음, 자기 글자만큼의 영역만 -->	
+	<a href="#">링크태그</a>
+	<a href="#">링크태그</a>
+	<a href="#">링크태그</a>
+	<span>스팬태그</span>
+	<span>스팬태그</span>
+	<span>스팬태그</span>
+	<hr />
+	
+	<!-- 인라인블럭요소 : 수평나열, 영역가질 수 있음 -->
+	<img alt="그림1" src="http://picsum.photos/100/100">
+	<img alt="그림2" src="http://picsum.photos/100/100">
+	<img alt="그림3" src="http://picsum.photos/100/100">
+
+
+</body>
+</html>

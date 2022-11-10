@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.box{
+		float: left;
+		width: 150px;
+		height: 150px;
+		border: 3px solid black;
+		margin: 40px;
+		perspective: 200px; /* 3d 원근감 지정 */
+	}
+	
+	
+	.box>div{
+		width: 100%;
+		height: 100%;
+		background-color: orange;
+		transition-duration: 1s;
+	
+	}
+	
+	.child01:hover{
+		transform: rotateX(180deg);
+	}
+	.child02:hover{
+		transform: rotateY(180deg);
+	}
+	.child03:hover{
+		transform: rotateZ(180deg);
+	}
+	
+</style>
+</head>
+<body>
+	<div class="box"><div class="child01"></div></div>
+	<div class="box"><div class="child02"></div></div>
+	<div class="box"><div class="child03"></div></div>
+</body>
+</html>

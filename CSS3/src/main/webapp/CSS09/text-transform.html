@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+ h1 {
+ 	border: 3px solid black;
+  padding: 20px;
+  color: orange;
+ }
+ /* text-transform : 영문 텍스트의 대소문자 설정
+ 		letter-spacing : 글자 간격, 기본값 normal : 원래간격으로 설정 
+ 		word-spacing : 단어사이 간격*/
+ 
+ .text01 {
+ 	text-transform: uppercase;	/* 대문자로 처리 */
+ 	letter-spacing: normal;
+ 	word-spacing: normal;
+ }
+
+.text02 {
+ 	text-transform: lowercase;	/* 소문자로 처리 */
+ 	letter-spacing: 5px;
+	word-spacing: 20px;
+ }
+ 
+ .text03 {
+ 	text-transform: capitalize;	/* 첫글자만 대문자로 처리 */
+ 	letter-spacing: 10px;
+	word-spacing: 40px;
+ }
+</style>
+
+
+</head>
+<body>
+	<h1 class="text01">You are not alone</h1>
+	<h1 class="text02">You are not alone</h1>
+	<h1 class="text03">You are not alone</h1>
+</body>
+</html>

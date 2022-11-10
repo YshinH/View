@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 	#lower>div{ */
+/* 	#lower div{ */
+/* 	#lower>div:first-child{ *//*  */
+/* 	#lower div:first-child{ *//* : 이, 가 ☞ 순서 */
+	#lower>div:first-of-tyPe{	/* : 의 ☞ 태그, 선택자*/
+	color: blue;
+	}
+	
+/* 	#lower>p:nth-child(2){ */
+	#lower>p:first-of-type{
+	color: red;
+	}
+	
+/* 	#lower>p:nth-child(3){ */
+/* 	#lower>p:last-child{ */
+	#lower>p:nth-child(3){
+	color: blue;
+	}
+	
+	/* parent h1{} */
+	/* parent h1:first-child{} */
+	/* parent h1:nth-child(1){} */
+	/* parent h1:nth-of-type(1){} */
+	#parent h1:first-of-type{
+	color: blue;
+	}
+	
+	#parent>div:first-of-type{
+	color: purple;
+	}
+	
+	#parent>p:nth-of-type(1){
+	color: red;
+	}
+	
+	#parent>p:last-of-type{
+	color: blue;
+	}
+	
+	
+
+</style>
+</head>
+<body>
+	<div id="lower">
+		<div>blue</div>
+		<p>red</p>
+		<p>blue</p>
+	</div>
+	<div id="parent">
+		<h1>blue</h1>
+		<div>purple</div>
+		<p>red</p>
+		<p>blue</p>
+	</div>
+</body>
+</html>

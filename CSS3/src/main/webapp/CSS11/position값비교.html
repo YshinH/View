@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* {
+		/* margin: 0px; */
+		/* padding: 0px; */
+	}
+	
+	body{
+		height:2000px;	/* 세로 스크로바 생성 */
+	}
+	
+	div {
+		width: 100px;
+		height: 100px;
+		border: 5px solid black;
+		text-align: center;
+		line-height: 100px;
+	}
+	
+	.box01{
+		background-color: pink;
+		position: static;	/* 기본값: 자신의 위치에 고정된 상태, 위치와 무관 */
+		top: 200px;
+		left: 200px;
+	}
+	.box02{
+		background-color: lightblue;
+		position: relative;	/* 현재 위치에서 상대적으로 이동 */
+		top: -50px;
+		left: 50px;
+	}
+
+	
+	.box03{
+		background-color: coral;
+		position:	absolute;	/* 화면의 시작점을 기준으로 절대적으로 이동 */
+		top: 100px;
+		left: 100px;
+	}
+	.box04{
+		background-color: yellowgreen;
+		position: fixed;	/* 스크롤과 상관없이 좌표를 고정 */
+		top: 150px;
+		left: 150px;
+	}
+
+
+</style>
+</head>
+<body>
+	<div class="box01">static</div>
+	<div class="box02">relative</div>
+	<div class="box03">absolute</div>
+	<div class="box04">fixed</div>
+</body>
+</html>

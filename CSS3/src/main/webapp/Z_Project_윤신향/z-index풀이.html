@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style type="text/css">
+	*{	/* 전체 리셋한 상태에서 */
+		margin: 0px;
+		padding:0px;
+		box-sizing: border-box;
+	}
+
+	#contain{
+		width: 800px;
+		margin: 0px auto;
+		border: 1px solid red;
+	}
+	
+	#header{
+		height: 50px;
+		background-color: gray;
+	}
+	
+	#content {
+		height: 200px;
+		position: relative;
+	}
+	
+	#content>div{
+		width: 100px;
+		height: 100px;
+		border: 2px dashed green;
+		position: absolute;
+	}
+	
+	#content>#content1{
+		top: 0px;
+		left: 0px;
+		background-color: aqua;
+		z-index: 4;
+	}
+	
+	#content>#content2{
+		top: 50px;
+		left: 50px;
+		background-color: yellow;
+		z-index: 3;
+	}
+	#content>#content3{
+		top: 100px;
+		left: 100px;
+		background-color: blue;
+		z-index: 2;
+	}
+	
+	#content>#content4{
+		top: 150px;
+		left: 150px;
+		background-color: purple;
+		z-index: 1;
+	}
+	
+	span{
+		display: block;
+		color: red;
+		font-weight: bold;
+	}
+	
+	#content>span{
+		text-align: center;
+		line-height: 200px;
+	}
+
+	#footer{
+		height: 50px;
+		background-color: gray;
+	}
+	
+	#content>#content1:hover,
+	#content>#content2:hover,
+	#content>#content3:hover,
+	#content>#content4:hover{
+		z-index: 10;
+	}
+
+</style>
+</head>
+<body>
+	<div id="contain">
+		<div id="header">HEADER<span>(800*50)</span></div>
+		<div id="content"><span>(800*200)</span>
+			<div id="content1">content1<span>(100*100)</span></div>
+			<div id="content2">content2<span>(100*100)</span></div>
+			<div id="content3">content3<span>(100*100)</span></div>
+			<div id="content4">content4<span>(100*100)</span></div>
+		</div>
+		<div id="footer">FOOTER<span>(800*50)</span></div>
+	</div>
+</body>
+</html>

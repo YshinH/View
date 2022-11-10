@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p {
+		width: 250px;
+		border: 3px solid black;
+		padding:20px;
+		color: orange;
+		text-align: left;
+	}
+	
+/* 	white-space : 요소 내부의 공백을 처리하는 방법을 지정 
+		기본값 : normal, 부모 영역보다 넘어가는 텍스트는 내려감*/
+	
+	.white01{
+/* 		text-align: left; */
+		white-space: normal;
+	}
+	
+	.white02 {
+/* 		text-align: justify;	양쪽 정렬  */
+		white-space : nowrap;		/* 넘친 텍스트가 안내려감*/
+		overflow: hidden;				/* 넘친거 숨기기 */
+		text-overflow: ellipsis;/* 생략 */
+	}
+	
+	
+	
+	.whilte03 {
+/* 		text-align: right; */
+		white-space: pre; /* 엔터어리한 곳의 텍스트가 내려감 */
+	}
+	
+
+
+</style>
+</head>
+<body>
+	<p class="white01">
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+	</p>
+	<p class="white02">
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+	</p>
+	<p class="white03">
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+		우리나라 대한민국 코리아
+	</p>
+</body>
+</html>

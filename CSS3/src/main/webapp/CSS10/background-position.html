@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	div { 
+		width: 400px;
+		height: 120px;
+		margin-bottom: 10px;
+		background-image: url("../image/cat1.png");
+		background-repeat: no-repeat;
+		border: 3px solid black;
+	}
+	
+/* 	background-position : 요소의 배경이미지 위치를 지정하는 속성 */
+/* 	background-position : x축위치, y축위치 */
+/* 	기본값은 좌측상단 즉, background-position : 0px 0px */
+	
+	.box01{
+		background-position: right bottom;
+	}
+	.box02{
+		background-position: center center;
+	}
+	.box03{
+		background-position: center;/* 둘다 center면 하나만 작성 */
+	}
+	.box04{
+		background-position: 100px 50px;
+	}
+	.box05{
+		background-position: 100% 100%;
+	}
+	.box06{
+		background-position: right 100%;
+	}
+	
+
+
+
+</style>
+</head>
+<body>
+	<div class="box01"></div>
+	<div class="box02"></div>
+	<div class="box03"></div>
+	<div class="box04"></div>
+	<div class="box05"></div>
+	<div class="box06"></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* {
+		padding: 0px;
+		margin: opx;
+		box-sizing: border-box;
+	}
+
+	div{
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		border: 3px solid #666;
+		margin: 20px;
+	}
+	
+	.box01 {
+		line-height: 200px; /* 한 줄텍스트일때만 height 높이와 같게 설정하면 세로가운데 정렬이 됨 */
+	}
+	
+	/*img {
+		margin-top: 50px; /* 강제로 margin 조정해서 맞추는 방법밖에 없음 */
+/* 	}  */
+	
+	.box02 {
+		padding-top: 50px;
+	}
+	
+	p {
+		width: 100px;
+		height: 100px;
+		background-color: orange;
+		margin : 50px auto;	
+	}
+	
+	span {
+		line-height: 100px;
+	}
+	
+	.box04 {
+		
+		vertical-align: middle;/* 세로정렬로서 표(table)에서만 적용됨 → 표로 만들어줘야함 */
+		display: table-cell;
+		
+	}
+	
+	
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="box01">텍스트한줄</div>
+	<div class="box02">
+		<img src="http://picsum.photos/100/100" alt="box03" />
+	</div>
+	<div class="box03">
+		<p><span>텍스트</span></p>
+	</div>
+	<div class="box04">
+		텍스트1<br />텍스트2
+	</div>
+
+
+</body>
+</html>

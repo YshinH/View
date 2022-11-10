@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box{
+		width:200px;
+		height: 200px;
+		border: 3px solid black;
+		position: relative;
+	}
+	
+	
+	.box>div{
+		background-color: orange;
+		position: absolute;
+		transition-duration : 0.5s;
+	}
+	
+
+	.box>.child01{	/* 상단막대 */
+		width: 0px;
+		height: 30px;
+		top:0px;
+		left: 0px;
+		
+		}
+		
+	.box>.child02{	/* 우측막대 */
+		width: 30px;
+		height: 0px;
+		top:0px;
+		right:0px;
+		transition-delay: 0.5s;
+		
+	}
+
+	
+	.box>.child03{	/* 하단막대 */
+		width: 0px;
+		height: 30px;
+		bottom:0px;
+		right: 0px;
+		transition-delay: 1s;
+	}
+	
+	.box>.child04{	/* 좌측막대 */
+		width: 30px;
+		height: 0px;
+		bottom:0px;
+		left: 0px;
+		transition-delay: 1.5s;
+	}
+
+
+	.box:hover>.child01,
+	.box:hover>.child03{
+		width: 200px;
+	}
+	
+	.box:hover>.child02,
+	.box:hover>.child04{
+		height: 200px;
+	}
+
+
+</style>
+</head>
+<body>
+	<div class="box">
+		<div class="child01"></div>
+		<div class="child02"></div>
+		<div class="child03"></div>
+		<div class="child04"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		display: block;
+		margin-bottom: 20px;
+/* 		[left]라는 CSS속성을 사용하려면 [position]속성을 반드시 변경시켜야 사용 가능하다. */
+		position: relative;		/* 하나일때는 absolute사용하지만 여러개이니까 */	
+		
+		animation-name:move;
+		animation-iteration-count:infinite;
+		animation-direction:alternate;
+	}
+	
+	
+	img:nth-child(1) {
+		animation-duration: 1s;
+	}
+	
+	img:nth-child(2) {
+		animation-duration: 0.5s;
+	}
+	
+	img:nth-child(3) {
+		animation: move 10s infinite;/* 속기법 */
+	}
+	
+	
+	img:hover{
+		animation-play-state:paused;
+	}
+	
+	@keyframes move{
+		
+		from{
+			left: 0px;
+			transform: rotate(0deg)
+		}/* 객체형태 ☞ 속성명: 속성값; */
+		
+		to{
+			left: 500px;		
+			transform: rotate(360deg)
+		}/* 객체형태  */
+		
+	}/* keyframes */
+
+</style>
+</head>
+<body>
+	<img alt="ball01" src="../image/ball.png">
+	<img alt="ball02" src="../image/ball.png">
+	<img alt="ball03" src="../image/ball.png">
+</body>
+</html>

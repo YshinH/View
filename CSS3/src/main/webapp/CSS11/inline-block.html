@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		padding: 0px;
+		display: flex;
+		width: 200px;
+		margin : 30px auto;
+		display: table;		
+	}
+	
+	ul{
+		list-style: none;
+/* 		overflow: hidden; */
+	}
+	
+	li{
+		display: inline-block;
+		/* 자식요소에 인라인블럭요소로 변경만 하면 수평나열처리 */
+/* 		float: left; */
+		list-style: none;
+		width: 200px;
+		height: 100px;
+		background-color: gray;
+		margin-right: 5px;
+		text-align: center;
+	}
+	
+	
+	li:nth-child(2) {
+	/*	background-color: lightgray;*/
+		opacity: 0.7;
+	}
+	li:nth-child(3) {
+/* 		background-color: #ebeced; */
+		opacity: 0.3;
+	}
+	
+	
+
+</style>
+
+</head>
+<body>
+	<ul>
+		<li>우리나라 만세!!!</li>
+		<li>대한민국 만세!!!</li>
+		<li>Korea Fighting!!!</li>	
+	</ul>
+</body>
+</html>

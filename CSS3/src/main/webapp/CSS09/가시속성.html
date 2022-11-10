@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+		width: 200px;
+		height: 100px;
+		background-color: orange;
+	}
+	
+	.box01{
+		display: none;	/* 흔적도 없이 사라짐 */
+	}
+	
+	.box02{
+		visibility: hidden;	/* 영역은 차지하고 안보임 */
+	}
+	
+	.box03{
+		opacity: 0.5;		/* 투명도를 설정(0~1) */
+	}
+
+	.box04 {
+		display: none;	/* 1. 블럭요소로 변경 
+											 2. display:none으로 숨겼던 항목을 보여주는 기능*/
+	}
+</style>
+</head>
+<body>
+	<p>문단태그</p>
+	<div class="box01"></div>
+	<p>문단태그</p>
+	<hr />
+	
+	<p>문단태그</p>
+	<div class="box02"></div>
+	<p>문단태그</p>
+	<hr />
+	
+	<p>문단태그</p>
+	<div class="box03"></div>
+	<p>문단태그</p>
+	<hr />
+	
+	
+	<p>문단태그</p>
+	<div class="box04" style="display: block;"></div>
+ 	<p>문단태그</p>	 		<!--1. 블럭요소로 변경  -->
+											<!--2. display:none으로 숨겼던 항목을 보여주는 기능*/ -->
+	<hr />
+</body>
+</html>

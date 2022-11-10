@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		margin:0px;
+	}
+	
+	div{
+		width: 200px;
+		height: 200px;
+		padding: 10px;
+		border: 20px solid yellow;
+		margin: 10px;
+	}
+	
+	div:nth-child(1) {
+		padding: 0px;
+		border: 0px;
+		margin: 0px;
+		background-color: red;
+	}
+	div:nth-child(2) {
+		padding: 10px;
+		border: 10px;
+		margin: 10px;
+		background-color: green;
+		box-sizing: border-box;
+	
+	}
+	div:nth-child(3) {
+		padding: 10px;
+		border: 10px;
+		margin: 10px;
+		background-color: blue;
+	}
+	
+	
+	
+
+
+
+</style>
+</head>
+<body>
+	<div>200*200</div>
+	<div>200*200<br/>border-box</div>
+	<div>200*200<br/>content-box</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- 
+	링크선택자
+	:link ☞  href 속성을 가지고 있는 a 태그 선택
+	:visited ☞  방문했던 링크를 가지고 있는 a 태그 선택  
+	
+	전후 문자 선택자 
+	::before ☞  태그 앞에 위치하는 공간선택
+	::after ☞  태그 뒤에 위치하는 공간선택
+	-->
+<style type="text/css">
+	#wrap {
+		width: 800px;
+		margin: 10px auto;
+	}
+	
+	#header{
+		border-bottom: 1px solid gray;
+	}
+	
+	#content a{
+		text-decoration: none;
+	}
+	
+	#content a:link::after {	/* 	기존에 가지고 있는 내용 뒤에다가 */
+		content: ' - ' attr(href); /* 속성중에서 참조링크만 붙혀 */
+	}
+	
+	#footer {
+		border: 1px solid gray;
+	}
+	
+	#footer ul{
+		overflow: hidden;
+	}
+	
+	#footer ul li{
+		list-style: none;
+		float: left;
+		margin: 20px;
+	}	
+	
+
+
+</style>
+</head>
+<body>
+	<div id="wrap">
+
+		<div id="header">
+			<h1>주간 웹 사이트 접속</h1>
+		</div>
+
+		<div id="content">
+			<ul>
+				<li><a>링크 없음</a></li>
+				<li><a href="http://www.sba.seoul.kr" target="_blank">서울산업진흥원</a></li>
+				<li><a href="http://wiz.center" 			target="_blank">위즈센터</a></li>
+				<li><a href="http://www.yahoo.com" 		target="_blank">야후</a></li>
+				<li><a href="http://www.google.com" 	target="_blank">구글</a></li>
+			</ul>
+		</div>
+
+		<div id="footer">
+			<ul>
+				<li><img src="../image/logo.png"></li>
+				<li><img src="../image/copyright.png"></li>
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>

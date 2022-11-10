@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Gugi&family=Hi+Melody&family=Single+Day&family=Song+Myung&display=swap');
+div:nth-child(1) {
+		font-family: 'Black And White Picture', sans-serif;
+	}
+	div:nth-child(2) {
+		font-family: 'Gugi', cursive;
+	}
+	div:nth-child(3) {
+		font-family: 'Hi Melody', cursive;
+	}
+	div:nth-child(4) {
+		font-family: 'Single Day', cursive;
+	}
+	div:nth-child(5) {
+		font-family: 'Song Myung', serif;
+	}

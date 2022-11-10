@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		padding:0px;
+		margin:0px;
+	}
+	
+	.box{
+		float:left;
+		width: 150px;
+		height: 150px;
+		border: 3px solid black;
+		margin: 20px;
+	}
+	
+	.box>div{
+		width: 100%;
+		height: 100%;
+		background-color: orange;
+	}
+	
+	.child01{
+		transform: scale(0.5, 0.5);/* xy축 모두 변경 */
+	}
+	.child02{
+		transform: scaleX(0.5);/* x축 모두 변경 */
+	}
+	.child03{
+		transform: scaleY(0.5);/* Y축 모두 변경 */
+	}
+	.child04{
+		transform: translate(-20px, -20px);/* xy축 모두 이동 */
+	}
+	
+	.child05{
+		transform: translateX(20px);/* x축 모두 이동 */
+	}
+	
+	.child06{
+		transform: translateY(20px);/* Y축 모두 이동 */
+	}
+	
+	.child07{
+		transform: skew(20deg, 20deg);/* xy축 모두 기울기 */
+	}
+	
+	.child08{
+		transform: skewX(20deg);/* x축 기울기 */
+	}
+	
+	.child09{
+		transform: skewY(20deg);/* Y축 기울기 */
+	}
+	
+	.child10{
+		transform: rotate(20deg);/* Y축 회전 */
+	}
+	.child11{
+		transform: matrix(1, 0, 0, 1, 10, 10);
+	}/* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+	
+	
+	
+	
+</style>
+</head>
+<body>
+	<div class="box"><div class="child01"></div></div>
+	<div class="box"><div class="child02"></div></div>
+	<div class="box"><div class="child03"></div></div>
+	<div class="box"><div class="child04"></div></div>
+	<div class="box"><div class="child05"></div></div>
+	<div class="box"><div class="child06"></div></div>
+	<div class="box"><div class="child07"></div></div>
+	<div class="box"><div class="child08"></div></div>
+	<div class="box"><div class="child09"></div></div>
+	<div class="box"><div class="child10"></div></div>
+	<div class="box"><div class="child11"></div></div>
+
+</body>
+</html>

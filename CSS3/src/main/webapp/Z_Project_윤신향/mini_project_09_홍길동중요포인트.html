@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>홈페이지 레이아웃</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Times New Roman', serif;  
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+}
+
+#main_header {
+	width: 1000px;
+	height: 160px;
+	margin: 0px auto;
+	position: relative;
+}
+
+#main_header #main_gnb{
+	position:absolute; 
+	top : 10px;
+	right: 0px;
+}
+#main_header #main_gnb ul{
+	overflow: hidden;
+
+}
+
+#main_header #main_gnb ul li{
+	float: left;
+}
+
+#main_header #main_gnb ul li a{
+	display: block;
+	padding: 5px 15px;
+	border: 1px solid black;
+	margin-left: -1px;
+	
+}
+#main_header #main_gnb ul li a:hover{
+	background-color: black;
+	color: white;
+}
+
+#main_header #main_gnb ul li:first-child a{
+	margin-left: 0px;
+	border-radius: 20px 0px 0px 20px;
+}
+#main_header #main_gnb ul li:last-child a{
+	border-radius: 0px 20px 20px 0px;
+
+}
+
+#main_header #title{
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	font-family: 'Henny Penny';
+}
+
+#main_header #main_lnb{
+	position: absolute;
+	bottom: 10px;
+	right: 0px;
+}
+
+#main_header #main_lnb ul{
+	overflow: hidden;
+
+}
+#main_header #main_lnb ul li{
+	float: left;
+}
+
+#main_header #main_lnb ul li a{
+	display: block;
+	padding: 10px 20px;
+	border: 1px solid black;
+	margin-left: -1px;
+	
+}
+
+#main_header #main_lnb ul li a:hover{
+	background-color: black;
+	color: white;
+}
+
+#main_header #main_lnb ul li:first-child a{
+	margin-left: 0px;
+	border-radius: 20px 0px 0px 20px;
+}
+
+#main_header #main_lnb ul li:last-child a{
+	border-radius: 0px 20px 20px 0px;
+}
+
+#content{
+	width: 1000px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+
+#content>#main_section {
+	width: 790px;
+	float: left;
+}
+#content>#main_section .main_article{
+	border: 1px solid black;
+	margin-bottom: 10px;
+	padding: 20px;	
+}
+
+#content>#main_aside {
+	width: 200px;
+	float: right;
+}
+
+/* 이곳부터 중요포인트!!!!! */
+#first, #second{
+	display: none;
+	
+}
+
+.tab_item_1, .tab_item_2{
+	display: none;
+}
+
+#first:checked~.tab_item_1,
+#second:checked~.tab_item_2 {
+	display: block;
+}
+
+#first:checked~.buttons>label:first-child,
+#second:checked~.buttons>label:last-child{
+	background-color : black;
+	color: white;
+}
+
+#main_aside .buttons{
+	overflow: hidden;
+}
+
+#main_aside .buttons label{
+	display: block;
+	width: 100px;
+	border: 1px solid black;
+	float: left;
+	text-align: center;
+	background-color: white;
+	color: black;
+}
+
+
+#main_aside .buttons label:first-child{
+	border-right: 0px;
+}
+
+.item{
+	overflow: hidden;
+	padding:10px;
+	border: 1px solid black;
+	margin-top: -1px;
+}
+
+.thumbnail{
+	float: left;
+}
+
+.description{
+	float: left;
+	margin-left: 10px;
+	white-space: nowrap;
+	overflow: hidden;				/*중요포인트 : 3가지 함께 쓰는 기능 긴 글씨 뒤 생략 "..." */
+	text-overflow: ellipsis;
+	width: 120px;
+	
+}
+
+
+#main_footer{
+	width: 1000px;
+	margin: 0px auto;
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+	<header id="main_header">
+		<nav id="main_gnb">
+			<ul>
+				<li><a href="#">Web</a></li>
+				<li><a href="#">Mobile</a></li>
+				<li><a href="#">Game</a></li>
+				<li><a href="#">Simulation</a></li>
+				<li><a href="#">Data</a></li>
+			</ul>
+		</nav>
+		<div id="title"><!-- #title 에 Henny Penny 글꼴 적용 -->
+			<h1>Rint Development</h1>
+			<h2>HTML5 + CSS3 Basic</h2>
+		</div>
+		<nav id="main_lnb">
+			<ul>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS3</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">Node.js</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="content">
+		<section id="main_section">
+			<article class="main_article">
+				<h1>Main Article</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna
+					id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus
+					magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+					ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt
+					dictum urna ut ultricies. Nullam diam nibh, pellentesque non
+					laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor
+					laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas
+					justo libero, euismod sit amet suscipit eu, vulputate eget neque.
+					Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin
+					et odio aliquam erat pharetra accumsan et quis neque. Vivamus
+					interdum accumsan leo eu adipiscing. Integer accumsan elit non
+					turpis faucibus porttitor. Aliquam scelerisque nisi et turpis
+					pretium at ultricies turpis pharetra.
+				</p>
+			</article>
+			<article class="main_article">
+				<h1>Main Article</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna
+					id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus
+					magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+					ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt
+					dictum urna ut ultricies. Nullam diam nibh, pellentesque non
+					laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor
+					laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas
+					justo libero, euismod sit amet suscipit eu, vulputate eget neque.
+					Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin
+					et odio aliquam erat pharetra accumsan et quis neque. Vivamus
+					interdum accumsan leo eu adipiscing. Integer accumsan elit non
+					turpis faucibus porttitor. Aliquam scelerisque nisi et turpis
+					pretium at ultricies turpis pharetra.
+				</p>
+			</article>
+			<article class="main_article">
+				<h1>Main Article</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna
+					id ipsum eleifend cursus sit amet nec lectus. Nunc quis lacus
+					magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor
+					ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt
+					dictum urna ut ultricies. Nullam diam nibh, pellentesque non
+					laoreet ut, bibendum nec mauris. Maecenas pulvinar porttitor
+					laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas
+					justo libero, euismod sit amet suscipit eu, vulputate eget neque.
+					Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin
+					et odio aliquam erat pharetra accumsan et quis neque. Vivamus
+					interdum accumsan leo eu adipiscing. Integer accumsan elit non
+					turpis faucibus porttitor. Aliquam scelerisque nisi et turpis
+					pretium at ultricies turpis pharetra.
+				</p>
+			</article>
+		</section>
+		<aside id="main_aside">
+			<input type="radio" id="first"  name="tab" checked /> 
+			<input type="radio" id="second" name="tab" />
+			<section class="buttons">
+				<label for="first">First</label> 
+				<label for="second">Second</label>
+			</section>
+			<div class="tab_item_1">
+				<ul>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>HTML5 Canvas</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>HTML5 Audio</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>HTML5 Video</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>HTML5 Semantic Web</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="tab_item_2">
+				<ul>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>CSS3 Transition</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>CSS3 Animation</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>CSS3 Border</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+					<li class="item">
+						<a href="#">
+							<div class="thumbnail">
+								<img src="http://picsum.photos/45/45" />
+							</div>
+							<div class="description">
+								<b>CSS3 Box</b>
+								<p>2019-03-15</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main_footer">
+		<h3>HTML5 + CSS3 Basic</h3>
+		<address>Website Layout Basic</address>
+	</footer>
+</body>
+</html>

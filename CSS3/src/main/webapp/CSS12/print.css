@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* print.css */
+
+* {
+	background-color: blue;
+}
+
+h1 {
+	text-align: center;
+	color: red;
+}
