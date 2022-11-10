@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var newWindow = window.open("","","windth=30, height=20");
+
+	//위치 옮기기
+	newWindow.moveTo(200,200);	//절대적으로 위치 지정
+	
+	setInterval(function() {
+		newWindow.moveBy(50,50);	//상대적으로 위치 지정
+	}, 1000);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

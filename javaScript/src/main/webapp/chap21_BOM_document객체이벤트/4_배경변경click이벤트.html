@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	p {
+		width: 200px;
+		height: 50px;
+		border: 3px solid black;
+	}
+
+</style>
+
+<script type="text/javascript">
+	window.onload = function () {
+		//문서객체 가져오기
+		var btn01 = document.getElementById("btn01");
+		var btn01 = document.getElementById("btn02");
+		var btn01 = document.getElementById("btn03");
+		
+		var box = document.getElementById("box");
+		
+		//배경바꾸는 함수 생성
+		
+		function bgChange() {
+			var color = this.textContent;
+			box.style.backgroundColor = color;
+			
+		}
+		
+		btn01.onclick = bgChange;
+		btn02.onclick = bgChange;
+		btn03.onclick = bgChange;
+		
+		
+	}
+
+</script>
+</head>
+<body>
+
+	<button type="button" id="btn01">red</button>
+	<button type="button" id="btn02">green</button>
+	<button type="button" id="btn03">blue</button>
+	<hr/>
+	
+	<p id="box"></p>
+</body>
+</html>

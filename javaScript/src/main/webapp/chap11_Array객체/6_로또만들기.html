@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//로또 한게임 생성 프로그램
+	//1. 로또번호 당첨번호는 6개
+	var lotto = [];	//빈배열 생성, 생성 후 입력
+	
+	//2. 반복문으로 6개를 램덤으로 추출해서 담기
+	//1 ~ 45사이의 숫자를 랜덤으로 처리
+	//random() : 0부터 1미만의 랜덤한 소수반환
+	//실수로 반환하기 때문에 반드시 정수로 처리
+	//Math.ceil(숫자) : 숫자보다 같거나 큰 정수
+	//Math.floor(숫자) : 숫자보다 같거나 작은 정수
+	
+	
+	//1. 랜덤하게 6번 담기
+	for (var i = 0; i < 6; i++) {
+		//1~45사이의 숫자를 구하기
+		//Math.random()*45;	//0~1미만 출력, 우리는 1~45로 숫자 처리, 즉 경우의 수가 45개
+		var num = Math.ceil(Math.random()*45);	//경우의 수가 45개이므로 45곱함
+		
+		//2. 중복거르기
+		for ( var j in lotto) {
+			if (num == lotto[j]) {	//바로 위에서 구해논 번호와 기존 배열에 구해둔 번호와 같다면
+				num = Math.ceil(Math.random() * 45);
+			}//if
+		}//같지 않으면 for 문자 빠져나옴
+		
+		lotto.push(num);
+		
+	}//for 6번
+	
+	lotto.sort();	//문자로 인식
+	lotto.sort(function (a,b) {
+		return a - b;	//오름차순 정렬
+	});	//숫자로 인식
+	
+	document.write(lotto);
+	
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

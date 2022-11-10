@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function () {
+		
+		var coupon = document.getElementById("coupon");
+		
+		//keyup
+		coupon.addEventListener("keyup",function(){
+			//대문자로 변경
+			var text = coupon.value;	//JS에서는 값은 value, JQuery의 값은 val()메서드 사용
+			coupon.value = text.toUpperCase();//인수 없음, 단순히 대문자로만 변경
+		
+			
+		});
+		
+	}
+
+
+
+</script>
+</head>
+<body>
+	<form action="#">
+		<label for="coupon">쿠폰번호 입력 : </label>
+		<input type="text" id="coupon" maxlength="8"/>
+	
+	</form>
+</body>
+</html>

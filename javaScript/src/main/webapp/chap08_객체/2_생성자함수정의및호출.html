@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//생성자 함수 선언
+	function Mini(color,wheel,roof){
+		this.brand = 'Mini 3Door';
+		this.oil = 12.3;
+		this.door = 3;
+		this.color = color;
+		this.wheel = wheel;
+		this.roof = roof;
+
+		this.starting = function(x){
+			if(x == 'on'){
+					alert("브랜드는" + this.brand + "이고,\n연비는 " 
+							+ this.oil 		+ "이고,\nDoor의 갯수는 " 
+							+ this.door		+ "이고,\n자동차 색은 "
+							+ this.color 	+ "이고,\n자동차 휠은 "
+							+ this.wheel  + "이고,\n선루프 "
+							+ this.roof		+ "인 자동차의 시동이 켜졌습니다.");
+			}else if(x == 'off'){
+				alert("브랜드는" + this.brand + "이고,\n연비는 "
+						+ this.oil 		+ "이고,\nDoor의 갯수는 " 
+						+ this.door		+ "이고,\n자동차 색은 "
+						+ this.color 	+ "이고,\n자동차 휠은 "
+						+ this.wheel  + "이고,\n선루프는 "
+						+ this.roof		+ "인 자동차의 시동이 꺼졌습니다.");
+			}//if
+		}//starting
+	}//Mini
+
+	var csCar = new Mini('Island Blue','16inch Revolite Spoke','white');
+	var yhCar = new Mini('Chili Red','18" Revolite Spoke','black');
+
+	csCar.starting('on');
+	yhCar.starting('off');
+</script>
+</head>
+<body>
+
+</body>
+</html>

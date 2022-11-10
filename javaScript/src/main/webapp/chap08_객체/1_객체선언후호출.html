@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 	var 객체명 = {		//객체시작
+// 			속성명: 값,
+			
+// 			메소드명: function(){	//명령문 시작
+// 				//코드블럭
+// 			}
+			
+// 	}//객체종료
+
+	//객체선언
+	var car = {
+		//속성: 일반적인 값, 함수만 아니면 됨.
+		name: 'mini', //문자, 컴마로 구분하고 세미콜론 없음
+		model: 'mini cooper s',  //문자
+		color: ['red', 'green', 'blue'],  //배열
+		mileage: 12.5,  //숫자
+		
+		//메서드 : 기능을 수행하는 함수
+		power: function(x){	//함수
+			if(x == "on"){
+				alert(this.name + "자동차의 시동이 켜졌습니다.");
+			} else if(x == "off"){
+				alert(this.name + "자동차의 시동이 꺼졌습니다.")
+			}//if
+			
+		}//power function()
+		
+	}//car
+
+	//객체 자체를 호출
+	document.write(car + "<br />");
+	
+	//속성
+	document.write(car.name + "<br />");
+	document.write(car.color[0] + "<br />");
+	
+	
+	//메서드 호출
+	car.power("on");	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

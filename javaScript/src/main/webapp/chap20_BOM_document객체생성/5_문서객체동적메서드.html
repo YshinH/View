@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.name {display: none};	/* textContent에 적용됨 */
+	
+</style>
+</head>
+<body>
+	<h1 id="h1Text01"></h1>
+	<h1 id="h1Text02"></h1>
+	<h1 id="h1Text03"></h1>
+	<hr>
+	<h2 id="h2Text">안녕하세요
+		<span class="name">홍길동</span>님
+	</h2>
+		
+		<script type="text/javascript">
+			var h1Text01 = document.getElementById("h1Text01");
+			var h1Text02 = document.getElementById("h1Text02");
+			var h1Text03 = document.getElementById("h1Text03");
+
+			var h2Text = document.getElementById("h2Text");
+		
+			h1Text01.innerHTML = "<a href='#'>링크태그1</a>";	
+			h1Text02.innerText = "<a href='#'>링크태그2</a>";	
+			h1Text03.textContent = "<a href='#'>링크태그3</a>";	
+		
+			console.log("innerHTML : " + h2Text.innerHTML);
+			console.log("innerText : " + h2Text.innerText);
+			console.log("innerContent : " + h2Text.textContent);
+		
+		</script>
+		
+		
+		
+</body>
+</html>

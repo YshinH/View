@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	while (!before || !before.trim() || isNaN(before*1) ){ 
+		before = prompt("주민등록번호의 앞 6자리를 입력하세요","");
+	}
+	while (!after || !after.trim() || isNaN(after*1)) {
+		after = prompt("주민등록번호의 뒤 7자리를 입력하세요","");	
+	}
+	
+	var yy = before.substr(0,2);
+	var mm = before.substr(2,2);
+	var dd = before.substr(4,2);
+	
+	var genderat0 = after.charAt(0);
+	
+	
+	if (genderat0 == 1 || genderat0 == 3) {
+		gender = "남";
+	} else {
+		gender = "여";
+	}
+	
+	
+	alert("당신의 생년월일은 " + yy + "년 " + mm + "월 " + dd + "이고, 성별은" + gender + "입니다.");
+</script>
+</head>
+<body>
+
+</body>
+</html>

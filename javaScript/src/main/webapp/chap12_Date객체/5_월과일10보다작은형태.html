@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//2022년 05월 30일 월요일 형태로 출력
+	//요일을 배열로 담아야 함
+// 	var today = new Date();
+	
+// 	function getWeek(weekNo) {
+// 		var week = ["일", "월", "화", "수", "목", "금", "토"];
+// 		return week[weekNo];	
+// 	}
+	
+// 	var y = today.getFullYear();
+// 	var m = today.getMonth();
+// 	var de = today.getDate();
+	
+// 	document.write(y + "년" + m + "월" + de + "일" + getWeek(today.getDay()) + "요일");
+
+//오늘 선언
+	var today = new Date();
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;	//월, 0~11
+	var day = today.getDate();//날짜
+	var dayofWeek = today.getDay();//요일, 0~6
+	
+	if(month < 10){
+		month = "0" + month;
+	}
+	if(day < 10){
+		day = "0" + day;
+	}
+	
+	//요일을 담는 배열을 선언
+	var week = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+	
+	document.write(year + "년" + month + "월" + day + "일" + week[dayofWeek]);
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

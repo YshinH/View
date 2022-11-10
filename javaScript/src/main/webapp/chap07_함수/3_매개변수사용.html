@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//함수 선언
+function coffee(menu){
+	alert("교실나가기");
+	alert("스타벅스가기");
+	alert(menu + "주문하기");
+	alert("맛있게 마시기");
+	
+	
+}
+
+</script>
+</head>
+<body>
+	<input type="button" value="아메리카노" onclick="coffee(this.value);"/> <!-- 항상 값을 넘길때 this를 씀 -->
+	<input type="button" value="카페라떼" onclick="coffee(this.value);"/>
+	<input type="button" value="바닐라라떼" onclick="coffee(this.value);"/>
+	<input type="button" value="카라멜마끼야또" onclick="coffee(this.value);"/>
+	<input type="button" value="헤이즐라떼" onclick="coffee(this.value);"/>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{
+		border: 1px solid black;
+		margin: 0px auto;
+		border-collapse: collapse;
+		text-align: center;
+		display: table;
+	}
+	
+	td{
+		border: 1px solid black;
+	}
+
+</style>
+<script type="text/javascript">
+	var rows = prompt("행수를 입력하세요", "");
+	
+	while (!rows || !rows.trim() || isNaN(rows*1)) {
+		 rows = prompt("행수를 입력하세요", "");
+	}
+
+	var col = prompt("열수를 입력하세요","")	
+	while (!col || !col.trim() || isNaN(col*1)) {
+		col = prompt("열수를 입력하세요", "");
+	}
+	
+	//증가되는 수 선언
+	var num = 1;
+
+	var t ="<table>";
+	//tr 시작 rows만큼
+	for (var i = 1; i < rows; i++) {
+		t += "<tr>";
+		
+		//td 시작 col만큼
+		for (var j = 1; i < col; j++) {
+			t += "<td>" + num + "<td>";
+			num++;
+		}
+		t += "</tr>";
+		
+	}
+	t += "</table>";
+	
+	document.write(t);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 			var num1 = prompt("행을 입력하세요", "");
+// 			var num2 = prompt("열을 입력하세요", "");
+// 			var num = 1;
+			
+// 			document.write("<table>");
+// 			for(var i = 0; i <= num1; i++) {
+// 				document.write("<tr>");
+// 			    for(var j = 0; j <= num2; j++) { 
+// 			        document.write("<td>" + num + "</td>");
+// 			        num++;
+// 			    }//for j
+// 			    document.write("</tr>");
+// 			}//for i
+		
+// 			document.write("</table>");
+
+</script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

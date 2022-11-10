@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var today = new Date();	//오늘 날짜 선언
+	
+	var to01 = today.toDateString();
+	var to02 = today.toISOString();
+	var to03 = today.toJSON();
+	var to04 = today.toLocaleDateString();
+	var to05 = today.toLocaleTimeString();
+	var to06 = today.toLocaleString();
+	var to07 = today.toString();	//new Date()와 비슷
+	var to08 = today.toTimeString();
+	
+	document.write("new Date() : " + today + "<br/>");//숫자형식 //new Date() : Mon May 30 2022 10:49:53 GMT+0900 (한국 표준시)
+	document.write("toDateString : " + to01 + "<br/>" );	//toDateString : Mon May 30 2022
+	document.write("toISOString : " + to02 + "<br/>" );		//toISOString : 2022-05-30T01:46:49.859Z
+	document.write("toJSON : " + to03 + "<br/>" );				//toJSON : 2022-05-30T01:46:49.859Z
+	document.write("toLocaleDateString : " + to04 + "<br/>" );	//toLocaleDateString : 2022. 5. 30.
+	document.write("toLocaleTimeString : " + to05 + "<br/>" );	//toLocaleTimeString : 오전 10:46:49
+	document.write("toLocaleString : " + to06 + "<br/>" );	//toLocaleString : 2022. 5. 30. 오전 10:48:08
+	document.write("toString : " + to07 + "<br/>" );//문자형식	//toString : Mon May 30 2022 10:48:53 GMT+0900 (한국 표준시)
+	document.write("toTimeString : " + to08 + "<br/>" );//toTimeString : 10:52:21 GMT+0900 (한국 표준시)
+	
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

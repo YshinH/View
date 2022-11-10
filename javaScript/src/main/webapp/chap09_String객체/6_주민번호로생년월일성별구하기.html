@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//당신의 생년월일은 XX년 XX월 XX이고, 성별은 X입니다.
+		
+	var before = prompt("주민등록번호의 앞 6자리를 입력하세요", "");
+	var y = before.substr(0,2);
+	var m = before.substr(2,2);
+	var d = before.substr(4,2);
+	if (before.length == 6) {
+		if(m <= 12 && d <= 31){
+			var after = prompt("주민등록번호의 뒤 7자리를 입력하세요", "");
+			var first = after.charAt(0);
+			if (first == 1 || first == 3) {
+				alert("당신의 생일은 " + y + "년" + m + "월" + d + "일이고, 성별은 남자입니다.");					
+			} else if(first == 2 || first == 4) {
+				alert("당신의 생일은 " + y + "년" + m + "월" + d + "일이고, 성별은 여자입니다.");	
+			} else{
+				alert("1,2,3,4 중에만 입력하세요");
+				location.reload();
+			}//if			
+		}else{
+			alert("1월부터 12월까지 입력하시고, 1일부터 31일까지 입력하세요");
+			location.reload();
+		}//if
+	}else {
+		alert("6자로 입력하세요");
+		location.reload();
+	}//if
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

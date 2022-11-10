@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1초마다 n초가 지났습니다. 출력하고
+	//10초후에는 페이지 새로고침
+	
+	var num = 1;
+	setInterval(function() {
+		document.write(num + "초가 지났습니다." + "<br>");
+		num++;
+	}, 1000);
+	
+	setTimeout(function() {
+		location.reload();
+	}, 10001);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

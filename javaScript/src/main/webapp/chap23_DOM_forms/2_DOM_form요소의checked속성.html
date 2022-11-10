@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name = "myForm" id = "myForm">
+		<input type = "text" name = "idBefore" id="idBefore" maxlength="6" size="6" /> - 
+		<input type = "text" name = "idAfter" id="idAfter" maxlength="1" size = "1" style="width: 10px;"/>XXXXXX
+		<br /> <!-- 다음줄로 넘기기~ -->
+			
+		<input type = "radio" name ="gender" id ="male" > 
+		<label for ="male">남자</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type = "radio" name ="gender" id ="female" > 
+		<label for ="female">여자</label>&nbsp;&nbsp;&nbsp;&nbsp;
+	</form>
+	
+	<script type="text/javascript">
+	//id로 가져오는게 제일 편해~
+		var idBefore = document.getElementById("idBefore");
+		var idAfter = document.getElementById("idAfter");
+		
+		var male = document.getElementById("male");
+		var female = document.getElementById("female");
+		
+		
+		//주민번호 앞자리 1,3면 '남자' 2,4면 '여자'로 체크되게 만들거야
+		idAfter.onkeyup = function() {
+    var v =	this.value;
+			
+    if (v ==1 || v ==3) {  //if문으로 해주기~
+		 		male.checked = true;
+		 		female.checked = false;
+			} else if (v == 2 || v == 4){
+		 		male.checked = false;
+		 		female.checked = true;
+			}else {
+    		alert("1~4까지만 입력하세요");
+			}
+		}
+		
+		</script>
+</body>
+</html>

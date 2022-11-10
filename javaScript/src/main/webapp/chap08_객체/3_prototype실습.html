@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//문제 : 학생의 국어, 영어, 수학 점수를 통해 평균을 구하는 prototye
+//인스턴스 3개를 생성하시오
+//가변부분
+//홍길동, 90, 80, 75;
+//김철수, 100, 80, 90;
+//박영희, 100, 90, 100;
+
+//공통부분
+//평균
+
+//생성자함수명 : Score
+
+// 	function Score(kor, eng, mat){
+// 		this.kor = kor;
+// 		this.eng = eng;
+// 		this.mat = mat;
+	
+// 	}
+	
+// 	Score.prototype.name = "홍길동";
+// 	Score.prototype.student = function x() {
+// 		if(x == '홍길동'){
+// 			alert("홍길동의 평균점수 : " + (this.kor + this.eng + this.mat)/3);
+// 		}else if(x == '김철수'){
+			
+// 		}
+		
+// 	}
+	
+// 	var hong = new Score('')
+
+//1. 가변적인 부분은 생성자 함수 선언, this로 선언
+
+	function Score(name, kor, eng, math){
+		this.name = name;			//this.name은 내가 처리할 것, = name은 얻는 것
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	
+}
+
+//2. 공통 부분
+	Score.prototype.avg = function avg(){
+	
+		return this.name + "의 평균 : " + ((this.kor + this.eng + this.math)/3).toFixed(2) + "점<br/>"
+}
+
+
+	var stu01 = new Score("홍길동", 90, 80, 75);
+	var stu02 = new Score("김철수",100, 80, 90);
+	var stu03 = new Score("박영희",100, 90, 100);
+	
+	document.write(stu01.avg());
+	document.write(stu02.avg());
+	document.write(stu03.avg());
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

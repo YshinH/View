@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="myForm" id="myForm">
+		<input type="text" name="myInput" id="myInput">
+	
+	</form>
+	<p id="text"></p>
+	
+<script type="text/javascript">//중요함!!!!!
+	//form 안에 요소의 객체 선택
+	//1. name으로 가져오는 방법 -> document.폼이름.폼하위요소이름
+	//	var myInput = document.myForm.myInput;	//input 박스를 명명
+		
+	
+	//2. id로 가져오는 방법
+		var myInput = document.getElementById("myInput");	//input 박스를 명명
+		var text = document.getElementById("text");
+		
+		myInput.onkeyup = function () {
+			var v = this.value;
+			
+			text.textContent = v;
+		}
+
+</script>	
+
+</body>
+</html>

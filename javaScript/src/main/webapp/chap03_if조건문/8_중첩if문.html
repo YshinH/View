@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 사용자로부터 점수를 입력받아 0~100점까지만 입력받은 점수에 한해서 80점 이상이면 합격
+		 그렇지 않으면 불합격
+		 단, 0~100점 이외의 점수는 점수를 다시 입력하세요 라고 경고창을 띄운다*/
+
+/* 1.조건에 맞지 않는 것을 먼저 거르기 */
+	/*var score = prompt("점수를 입력하세요", "0");
+	
+	if (score > 100 || score < 0) {
+		alert("점수를 1~100점까지만 입력하세요");
+	} else {
+		if (score >= 80) {
+			alert("합격입니다.");
+		} else {
+			alert("불합격입니다.");
+		}
+	}
+*/
+
+/* 2. 조건에 맞는 것만 처리하고 맞지 않는 것은 나중에 거르기 */
+	var score = prompt("점수를 입력하세요", "0");
+
+
+	if(score >= 0 && score <= 100){
+		if (score >= 80) {
+			alert("합격입니다.");
+		} else {
+			alert("불합격입니다.");
+		}
+	} else{
+		alert("점수를 1~100점까지만 입력하세요");
+	}
+
+
+
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>

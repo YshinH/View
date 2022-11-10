@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var ch = window.open("", "", "width=300, height=400");
+	
+	ch.moveTo(0,0);
+	ch.resizeTo(width, height);
+	
+	function one() {
+		ch.moveBy(200,300);
+	}
+	
+	function two() {
+		ch.resizeBy(200,300);
+	}
+	
+	function three() {
+		ch.moveBy(300,100)
+		ch.resizeBy(300,400);
+	}
+	
+	
+	var w = 300;
+	var h = 400;
+	var x = screen.width/2 - w/2;
+	var y = screen.height/2 - h/2;
+	
+	
+	var newWindow = window.open("","","width=" + w + ", height=" + h + ", left=" + x + ", top=" + y);
+
+	function four() {
+		newWindow = window.open("","","width=" + w + ", height=" + h + ", left=" + x + ", top=" + y);
+	}
+
+
+
+</script>
+</head>
+<body>
+	<button type="button" onclick="one()">popup1 브라우저 창 위치(200,300)변경</button><br>
+	
+	<button type="button" onclick="two()">popup1 브라우저 창 크기(200,300)변경</button><br>
+	
+	<button type="button" onclick="three()">popup1 브라우저 창 위치(300,100) 창 크기(300,400)변경</button><br>
+	
+	<button type="button" onclick="four()">popup1 가운데로 창 띄우기</button><br>
+	
+</body>
+</html>

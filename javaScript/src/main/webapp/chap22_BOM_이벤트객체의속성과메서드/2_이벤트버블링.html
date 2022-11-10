@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	* {
+		margin: 0px; padding: 0px;
+	}
+	
+	h1 {
+		margin: 20px; padding: 20px;
+		border: 3px solid black;
+	}
+	a {
+		display: inline-block;
+		padding: 20px;
+		border: 3px solid black; 
+	}
+</style>
+<script type="text/javascript">
+
+// 버블링(bubbling): 이벤트가 상위요소로 전파되는 단계
+	window.onload = function() {
+		
+		var ttl = document.getElementById("ttl");
+		var link = document.getElementById("link");
+	
+		ttl.onclick = function() {
+			this.style.backgroundColor = "blue";
+		}//ttl click
+		
+		link.onclick = function(e) {
+			e.stopPropagation();	//이벤트 버블링 취소
+			e.preventDefault();		//기본이벤트 제거
+			this.style.backgroundColor = "red";
+		}//link click
+		
+	}
+
+</script>
+
+</head>
+<body>
+	<h1 id="ttl">
+		<a href="#" id="link">링크태그</a>
+	</h1>	
+	
+	
+</body>
+</html>
+
+

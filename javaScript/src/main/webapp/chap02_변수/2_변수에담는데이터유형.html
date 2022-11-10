@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//숫자
+	var num = 100;
+	console.log(typeof(num));	//number
+	
+	//문자열
+	var	str01 = "100";
+	console.log(typeof(str01));	//string
+
+	var	str02 = "안녕하세요";
+	console.log(typeof(str02));	//string
+	
+	//불
+	var bool01 = 10>5;
+	console.log(typeof(bool01));	//true, boolean
+
+	var bool02 = true;
+	console.log(typeof(bool02));	//true, boolean
+	
+	//gkatn
+	//prompt("질의텍스트", "예시텍스트");
+	var fx = Number(prompt("값을 숫자로 입력하세요","숫자만 입력"));
+	//prompt의 결과값은 string 임
+	console.log(typeof(fx));
+	
+	//객체 : 모든 명령 가능한 대상
+	var obj = document;
+	console.log(typeof(document));
+	
+	//undefined : 값을 할당 받지 못한 상태
+	var test;	//undefined
+	console.log(typeof(test));//undefined
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

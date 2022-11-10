@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="text" id="textbox">
+	<p>키코드 : <span id="result"></span></p>
+	
+<script type="text/javascript">
+	var textbox = document.getElementById("textbox");
+	var result = document.getElementById("result");
+	
+	//키보드 이벤트
+	textbox.onkeypress = function (e) {
+		
+		var num = e.keyCode;
+		
+		result.textContent = num;
+		
+	}
+
+
+</script>
+	
+</body>
+</html>

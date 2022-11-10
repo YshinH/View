@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//구구단 출력
+
+var output = "";
+for (var i = 2; i <= 9; i++) {
+	output += "<h1>" + i + "단</h1>";
+	for (var j = 1; j <= 9; j++) {
+		if(i*j < 10){
+			output += i + "x" + j + "=0" + (j*i) + "<br />";
+				
+		}else{
+			output += i + "x" + j + "=" + (j*i) + "<br />";	
+		}
+	}
+}
+
+document.write(output);
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

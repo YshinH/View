@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 자바와 뷰의 각각 점수를 입력받아 평균과 각과목이 70점 이상이면 합격 아니면 불합격 -->
+<script type="text/javascript">
+	var java = Number(prompt("자바점수를 입력하세요, 점수는 1~100까지만 입력하세요", "정수 입력"));
+	var view = Number(prompt("뷰 점수를 입력하세요,  점수는 1~100까지만 입력하세요", "정수 입력"));
+	
+	var avg = ((java + view)/2).toFixed(0);
+		
+	
+
+	 	if(java >= 0 && java <= 100 || view >= 0 && view <= 100) {
+	 		if(java >= 70 && view >=70 || avg >= 70) {
+				alert("합격입니다.");
+				alert(avg);
+			} else{
+				alert("불합격입니다.");
+				alert(avg);
+			}
+	 	} else {
+	 		alert("점수를 잘못 입력하셨습니다.")
+	 	}
+ 
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

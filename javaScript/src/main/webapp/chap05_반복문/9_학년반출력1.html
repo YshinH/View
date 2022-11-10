@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+// 	for (var i = 1; i <= 3 ; i++) {
+// 		document.write("=====" + i + "학년=====<br>");
+// 		for (var j = 1; j <= 10 ; j++) {
+// 				if(j < 10){
+// 				document.write(i + "학년 0" + j + "반<br>");
+					
+// 				}else {
+// 				document.write(i + "학년 " + j + "반<br>");
+					
+// 				}//if
+// 		}//for j
+// 	}//for i
+	
+	var output = "";	//문자열 초기화
+	//학년을 출력
+	for (var i = 1; i <= 3; i++) {
+		
+		output +="=====" + i + "학년=====<br />";
+		//반을 출력
+		for (var j = 1; j <= 10; j++) {
+			
+			output += i + "학년 " + j + "반<br />";
+		}
+	}
+	
+	document.write(ouput);
+	
+
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

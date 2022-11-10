@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#circle{
+		position:absolute;
+		
+		left: 0px;
+		top: 0px;
+		background-color: navy;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		opacity: 0.5; 
+	}
+
+</style>
+</head>
+<body>
+	<div id="circle"></div>
+	
+<script type="text/javascript">	//마우스를 따라다니는 원
+	var circle = document.getElementById("circle");
+	
+	document.onmousemove = function (e) {
+		var x = e.clientX;
+		var y = e.clientY;
+		
+		circle.style.left = (x-25) + "px";
+		circle.style.top = (y-25) + "px";
+	}
+
+
+</script>
+	
+	
+</body>
+</html>

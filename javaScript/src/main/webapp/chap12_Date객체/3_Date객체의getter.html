@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1. 오늘 꼭 선언하기
+	var today = new Date();
+	document.write(today + "<br/>");
+	
+	//년, 월, 일을 담을 변수
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	
+	document.write(year + "년 " + month + "월 " + day + "일" + "<br/>");
+	
+	var hour = today.getHours();
+	var minute = today.getMinutes();
+	var second = today.getSeconds();
+	
+	document.write(hour + "시 " + minute + "분 " + second + "초" + "<br/>");
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

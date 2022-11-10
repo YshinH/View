@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+window.onload = function() {  //1.준비구문, JS - 맨위에 있지만 아래모든걸 읽고 나서 마지막에 읽히는거야
+															//4.근데 여따 jq 문법 쓰면 안돼!
+	
+} //window.onload
+
+$(document).ready(function() {  //2.준비구문, JQuery -3.jq개념이 js안에 있는거야 그래서 이 안에 js문법 써도 ok
+	//5.아이디 입력안하면 회원가입버튼 눌렀을때 아이디 입력하라고 떠야해. 
+	//6.변수할당 먼저 하자 ① document.폼이름.폼하위요소이름
+	//										 ② document.getElementById("아이디명")			-> 이걸 많이 씀, jq는 이것조차 안줘도 됨
+	//7.input 박스에 할당. 값은 변수명.value, $(변수명).val() -> jq에서는 바로 사용가능, js에서는 변수에 다 할당하고 사용가능 
+ var userId = document.getElementById("userId");
+ var userPw = document.getElementById("userPw");
+ var userName = document.getElementById("userName");
+ var userTel = document.getElementById("userTel");
+ var userEmail = document.getElementById("userEmail");
+	
+// 8.유효성검사 변수를 지정
+ var regUserId = /^[a-z]\w{4,11}$/;  //영문자로 시작하고 총 5~12자 사이
+ var regUserPw = /^[a-z]\w{4,11}$/;  //영문자로 시작하고 총 5~12자 사이
+ var regUserName = /^[가-힣]{2,5}$/;  //한글로 2글자부터 5자 사이
+ var regUserTel = /^010\d{8}$/;  		//010으로 시작하고 8글자 아니면 걸러야해
+ var regUserEmail = /^[a-z]\w{4,11}@[a-z]{2,10}[\.][a-zA-Z]{2,3}[\.]?[a-z]{0,2}$/;  		//영문자로 시작하고 5글자 부터 12자 사이 @(이메일)
+//								    abcdefg     @lg						. co						 .  kr	
+//								    abcdefg     @lgchem				. com							-생략가능하고!
+//영문자로 시작하고 5~12글자
+
+/* window.onload = function name() {
+	
+}
+ */
+ 
+ //9.
+	document.getElementById("myForm").onsubmit = function () {  //12.근데 submit은 무조건 전송해버리니까 안되게끔 하려면
+	
+// if (!userId.value) {  //10.값이 없다면! //userId.value == "" ←같은말이야!
+	 if (!$("#userId").val()) { //값이 없다면! 위와 같은 말임
+		alert("아이디를 입력하세요");
+	  userId.focus(); //11.아이디 입력란으로 다시 가라고 하는거! 초점 맞추기 focus()써줘
+	  return false; //13. 그러니까 전송 취소를 시켜야햇!!!! 
+	} else if(!regUserId.test(userId.value)) {		 //14.값이 있으면 이제 유효성 검사해줘야지 -regUesId 이 객체로 테스트해줘. 어떤걸? userId.value
+						//15. 정확하지 않다면! (걸러내는게 목적이니까)
+		alert("아이디 형식이 잘못 작성되었습니다."+  //16. 다음줄로 넘겨서 두줄로 쓰고 싶을때!"" + "" 해주고 줄바꿈\n해줘
+				"\n아이디는 영문자로 시작하고 5~12자입니다.");
+		userId.value = ""; //17.값 삭제 - 공백넣는다는게 값을 삭제 한다는거야!
+		userId.focus(); //18. 다시 입력받아야 할 자리로 원위치 시켜줘
+		return false; // 19. 아직 전송 노노야
+	}// userId if
+	 
+	 
+		//20. 복붙해서 pw만들어주기
+	 if (!userPw.value) {
+		alert("패스워드를 입력하세요");
+	  userPw.focus(); 
+	  return false; 
+	} else if(!regUserPw.test(userPw.value)) {		
+		alert("비밀번호 형식이 잘못 작성되었습니다."+ 
+				"\n비밀번호는 영문자로 시작하고 5~12자입니다.");
+		userPw.value = ""; 
+		userPw.focus(); 
+		return false;
+	}// userPw if 
+	
+	
+	//21. 복붙
+	 if (!userName.value) { //이름 형식이 잘못됐다면!
+		alert("이름를 입력하세요");
+	  userName.focus(); 
+	  return false; 
+	} else if(!regUserName.test(userName.value)) {		
+		alert("이름 형식이 잘못 작성되었습니다."+ 
+				"\n이름 영문자로 시작하고 5~12자입니다.");
+		userName.value = ""; 
+		userName.focus(); 
+		return false;
+	}// userPw if 
+		
+	//22.복붙!
+	 if (!userTel.value) {
+		alert("전화번호를 입력하세요");
+	  userTel.focus(); 
+	  return false; 
+	} else if(!regUserTel.test(userTel.value)) {		
+		alert("전화번호 형식이 잘못 작성되었습니다.");
+		userTel.value = ""; 
+		userTel.focus(); 
+		return false;
+	}// userPw if 
+	 
+	  //23. 이메일 복붙!
+	 if (!userEmail.value) {
+		alert("이메일을 입력하세요");
+	  userEmail.focus(); 
+	  return false; 
+	} else if(!regUserEmail.test(userEmail.value)) {		
+		alert("이메일 형식이 잘못 작성되었습니다.");
+		userEmail.value = ""; 
+		userEmail.focus(); 
+		return false;
+	}// userPw if 
+	 
+	  
+	
+	}//onsubmit
+
+/* 	window.onload = function () {
+		
+	}
+	 */
+	 //24. 가입취소 만들기
+	 document.getElementById("myForm").onreset = function () {
+		var result =confirm("정말 회원가입을 취소하겠습니까?"); //25.confirm은 확인 취소 창 뜨게 하는거야! 
+		if (result) { //26.확인을 눌렀으때 이 멘트가 뜨는거지
+			alert("회원가입이 취소 되었습니다."); 
+			userId.value ="";  // 27.공백은 썼던거 다 삭제 시키는거
+			userPw.value =""; 
+			userName.value =""; 
+			userTel.value =""; 
+			userEmail.value =""; 
+			userId.focus();
+			location.href="form_submit.html";			//속성이니까 =""
+			location.replace("form_submit.html");	//메서드니까 ("")안에다가 씀
+			location.assign("form_submit.html");	//메서드니까 ("")안에다가 씀
+			return false;
+		} else {
+			userId.focus();
+			return false;
+		}
+		 
+	}//onreset
+	 
+	//location.href는 속성
+	//location.replace는 메서드
+	 
+});	//ready
+	
+</script>
+</head>
+<body>
+	<form action="#" method="get" name="myForm" id="myForm" autocomplete="on">
+		<fieldset>							<!-- 넘어갈땐 name으로 넘어가니까 쓰는 습관을 들여! -->
+			<legend>회원가입</legend>		
+			<p>					
+				<label for="userId">아&nbsp;&nbsp;이&nbsp;&nbsp;디</label>
+				<input type="text" name="userId" id="userId" 
+					placeholder="영문자로 시작하고 5~12글자" 
+					size="20" maxlength="12" autofocus="autofocus" />
+			</p>
+			<p>
+				<label for="userPw">비밀&nbsp;번호</label>
+				<input type="password" name="userPw" id="userPw" 
+					placeholder="영문자로 시작하고 5~12글자" autocomplete="on"
+					size="20" maxlength="12"/>
+			</p>
+			<p>
+				<label for="userName">이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</label>
+				<input type="text" name="userName" id="userName" 
+					placeholder="이름은 한글로 2~5글자" 
+					size="20" maxlength="5" />
+					<!-- autofocus="autofocus" autocomplete="on" -->
+			</p>
+			<p>
+				<label for="userTel">전화&nbsp;번호</label>
+				<input type="text" name="userTel" id="userTel"
+					placeholder="숫자로 11자" 
+					size="20" maxlength="11" />
+			</p>
+			<p>
+				<label for="userEmail">이&nbsp;&nbsp;메&nbsp;&nbsp;일</label>
+				<input type="text" name="userEmail" id="userEmail" 
+					placeholder="이메일을 입력하세요" />
+			</p>
+			<p>
+				<input type="submit" value="회원가입" />
+				<input type="reset"  value="가입취소" />
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>

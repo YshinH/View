@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function(){	//준비구문=(다 읽고 마지막에 실행할게)
+		
+// 		var text = document.querySelector(".text");	//일치된 첫번째만을 선택
+//		text.style.color="red";
+
+var text = document.querySelectorAll(".text");			//querySelector => css선택자
+		//모든 요소 선택가능 => 배열로 사용
+		text[0].style.color="red";
+		text[1].style.color="green";
+		text[2].style.color="blue";
+		
+	}
+
+</script>
+
+</head>
+<body>
+	<h1 class="text">제목태그1</h1>	
+	<h1 class="text">제목태그2</h1>
+	<h1 class="text">제목태그3</h1>
+	
+	<script type="text/javascript">
+
+</script>
+</body>
+</html>

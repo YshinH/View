@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//1. 생성자 함수 선언
+	function Mini(color,wheel,roof){
+		this.color = color;
+		this.wheel = wheel;
+		this.roof = roof;
+	}
+	//2. 공통 부문 prototype 생성
+	Mini.prototype.brand = 'Mini 3Door';
+	Mini.prototype.oil = 12.3;
+	Mini.prototype.door = 3;
+	Mini.prototype.starting = function(x){
+			if(x == 'on'){
+   	   alert(this.color + '인 ' + this.brand + 	'가 시동이 켜졌습니다.');
+  	  }else if(x == 'off'){
+  	    alert(this.color + '인 ' + this.brand + 	'가 시동이 꺼졌습니다.');
+			}//if
+		}//starting
+	
+	//3. new 연산자로 변경할 값 생성자 인스턴스 호출
+	var csCar = new Mini('Island Blue','16inch Revolite Spoke','white');
+	var yhCar = new Mini('Chili Red','18inch Revolite Spoke','black');
+
+	console.log(csCar);
+	console.log(yhCar);
+
+	csCar.starting('on');
+	yhCar.starting('off');
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

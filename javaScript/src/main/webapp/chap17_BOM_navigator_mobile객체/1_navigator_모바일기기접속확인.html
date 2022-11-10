@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//모바일 기기 이름을 담은 이름의 배열
+	var mobile_keys = new Array('iPhone','iPad','Android','BlackBerry','Windows Phone',
+			'Windows CE','LG','MOT','SAMSUNG','SonyEricsson','Nokia');
+
+	for ( var i in mobile_keys) {
+		if (navigator.userAgent.match(mobile_keys[i])) {
+			alert(mobile_keys[i] + '모바일 기기에서 접속하셨습니다.');	//페이지 검사에서 토글 눌러서 새로고침
+			location.href='http://m.naver.com';
+		}//if
+	}//for
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

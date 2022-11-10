@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+//title 쓰기 2단 3단 ....
+	for (var i = 2; i <= 9; i++) {
+		document.write("&nbsp;&nbsp;&nbsp;" + i + "단&nbsp;&nbsp;&nbsp;&nbsp;");
+	}
+	
+	document.write("<br />");
+
+//구구단 구하기
+	var output ="";
+	for (var i = 1; i <= 9; i++) {
+		
+		for (var j = 2; j <= 9; j++) {
+			
+			if (i*j < 10) {
+			document.write(j + "x" + i + "=0" + j*i + "&nbsp;&nbsp;");
+			} else {
+			document.write(j + "x" + i + "="  + j*i + "&nbsp;&nbsp;");
+			}
+			
+		}//inner for
+		document.write("<br />");
+	}//outer for
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

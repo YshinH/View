@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1. 오늘 선언
+	var today = new Date();
+	document.write(today.toLocaleDateString() + '<br>');//2022. 5. 17.
+	
+	var d = today.getDate();
+	//2.100일후
+	today.setDate(d + 99); //오늘부터 1일 이므로
+	document.write(today.toLocaleDateString() + '<br>');//2022. 8. 24.
+	
+	
+	
+// 	var today = new Date();
+// 	document.write(today.toLocaleDateString() + "<br>");
+	
+// 	var d = today.getDate();
+// 	today.setDate(d + 99);
+// 	document.write(today.toLocaleDateString() + "<br>");
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//주민번호 뒤 7자리를 입력받아 첫번째 문자가 1 또는 3이면 남자, 아니면 여자
+
+	var after = prompt("주민등록번호 뒤 7자리를 입력하세요","1,2,3,4 중에 입력");
+
+	var first = after.charAt(0);
+
+	if (first == 1 || first == 3) {
+		alert("남자");
+	} else if(first == 2 || first == 4) {
+		alert("여자");
+	} else{
+		alert("1,2,3,4 중에만 입력하세요")
+	}//if
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//오늘의 요일을 switch문으로 반환, 일요일 형식으로
+	
+	var today = new Date().getDay();
+	
+	//document.write(today);
+	
+	switch (today) {
+	case 0:
+		today = "일요일";
+		break;
+	case 1:
+		today = "월요일";
+		break;
+	case 2:
+		today = "화요일";
+		break;
+	case 3:
+		today = "수요일";
+		break;
+	case 4:
+		today = "목요일";
+		break;
+	case 5:
+		today = "금요일";
+		break;
+	default:
+		today = "토요일";
+		break;
+	}
+	
+	alert("오늘은 " + today + "입니다.");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

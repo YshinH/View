@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var num = 1;
+	
+	var auto = setInterval(function() {
+		document.write(num + "초가 지났습니다.<br />");
+		num++;
+	}, 1000);
+	
+	setTimeout(function(){
+		clearInterval(auto);
+	},10001);
+
+	//clearInterval : 특정 시간마다 함수를 반복하는 것을 중단
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var num = prompt(" 단수를 입력하세요","0");
+
+		if(isNaN(num) || trim){
+			alert("숫자가 아닙니다 다시입력하세요");
+			location.reload();
+		}else{
+			document.write("<h1>&nbsp&nbsp&nbsp&nbsp" + num + "단<h1/>");
+		
+			for (var i = 1; i < 10; i++) {
+				if((num*i) < 10){
+					
+				document.write(num + "x" + i + " = 0" + (num * i) + "<br />");
+				}else{
+					
+				document.write(num + "x" + i + " = " + (num * i) + "<br />");
+				}//if
+			}//for
+		}//if
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

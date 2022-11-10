@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var num = 1;
+
+var auto = setInterval(function() {
+	console.log(num);
+	num++;
+}, 100);
+
+function stop(){
+	clearInterval(auto);
+};
+
+function go(){
+	setInterval(function() {
+		console.log(num);
+		num++;
+	}, 100);
+};
+
+
+</script>
+</head>
+<body>
+<input type="button" value="정지버튼" onclick="stop(this.value);"/>
+<input type="button" value="다시시작" onclick="go(this.value);"/>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var dan = prompt("단을 입력하세요","");
+	/* 거를 조건 1. 값이 없으면
+							 2. 공백입력시	-> 공백제거 : 변수(객체).trim()
+						   3. 문자입력시	-> 숫자(1)와 곱했을때 NaN의 결과 도출, isNAN(수식)
+	*/
+	/*
+	if(변수==""){	//값이 없다면
+	if(!변수){		//★값이 없다면
+		
+	}else{
+		
+	}	
+	}
+	*/
+	
+	
+	document.write("<h1>"+ dan +"단</h1>");
+	
+	var output = "";
+	for (var i = 1; i <= 9; i++) {
+		if (dan * i < 10) {
+			output += dan + "x" + i + "=0" + dan * i +"<br />";
+		} else {
+			output += dan + "x" + i + "=" + dan * i +"<br />";
+		}
+	}
+	document.write(output);
+
+</script>
+
+</head>
+<body>
+
+
+
+
+</body>
+</html>

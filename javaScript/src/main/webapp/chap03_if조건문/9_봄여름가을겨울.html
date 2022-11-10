@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var season = prompt("현재는 몇 월입니까?","0");
+	
+	if(season > 0 && season < 13){
+		if(season >= 3 && season <= 5){
+			document.write("햇살 가득한 봄이네요!");		
+		}else if(season >= 6 && season <= 8){
+			document.write("핫한 여름이네요!");		
+		}else if(season >= 9 && season <= 11){
+			document.write("청명한 가을이네요!");				
+		}else{
+			document.write("스키의 계절 겨울이네요!");							
+		}//if
+	}else {
+		alert("1부터 12까지만 입력하세요");
+		location.reload();
+	}//if
+	
+	
+	
+/* 	setTimeout(function(){
+		location.reload();
+		},3000); // 3000밀리초 = 3초
+*/
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
