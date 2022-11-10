@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>로그인</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/login.js"></script>
+<style type="text/css">
+	@import url("css/login.css");
+
+</style>
+
+
+</head>
+<body>
+	
+	<form action="#" method="post" id="logForm" name="logForm">
+	
+		<fieldset>
+			<h1>로그인</h1>
+			<img alt="이미지" src="http://picsum.photos/250/250">
+			<br>
+			<br>
+			<table>
+	
+				<tr>
+					<td>
+						<label for="id">아&nbsp;&nbsp;이&nbsp;&nbsp;디</label>		
+					</td>
+					<td>		
+							<input type="text" name="id" id="id" maxlength="15"
+							 placeholder="아이디를 입력해주세요" onclick="this.placeholder='';">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<label for="pw" >비밀&nbsp;번호</label>
+					</td>
+					<td>			
+						<input type="password" name="pw" id="pw" maxlength="15"
+							placeholder="비밀번호를 입력해주세요" onclick="this.placeholder='';">
+					</td>
+				</tr>	
+			</table>
+			<br>
+		
+		<input type="submit" value="로그인" id="submit" >
+		<input type="reset" value="취소" id="reset">
+		<br>
+		<br>
+		
+		<span style="color: white;">회원이 아니신가요? 여기서<br> 
+		<a href="signup.html">가입</a>하세요!</span>
+		
+		</fieldset>
+	</form>
+	
+</body>
+</html>
