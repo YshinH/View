@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table {
+		border: 1px solid black;	
+		width: 500px;
+		text-align: center;
+		border-collapse:collapse;
+	}
+	
+	th, td {
+		border: 1px solid black;
+	}
+</style>
+</head>
+<body>
+		<table>
+			<caption>제목</caption>
+			<colgroup>
+			<col span="2" style="background-color: red;"/>
+			<col span="1" style="background-color: green"/>
+			<col span="1" style="background-color: blue;"/>
+			
+			<tr style="background-color: green">
+				<th colspan="2">table header1</th>
+				<th colspan="2">table header2</th>
+				<!-- 
+				colspan : 칸병합
+				rowspan : 줄병합
+				 -->
+				 
+			</tr>
+			<tr>
+				<td colspan="2">table data1</td>
+				<td>table data2</td>
+				<td rowspan="3">table data3</td>
+			</tr>
+			<tr>
+				<td>table data4</td>
+				<td rowspan="2">table data5</td>
+				<td>table data6</td>
+			</tr>
+			<tr>
+				<td>table data7</td>
+				<td>table data8</td>
+			</tr>
+			<tr style="background-color: yellow;">
+				<td>table data9</td>
+				<td>table data10</td>
+				<td>table data11</td>
+				<td>table data12</td>
+			</tr>
+		</table>
+</body>
+</html>

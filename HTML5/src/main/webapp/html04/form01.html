@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+	action : form 양식의 데이터 내용을 전송할때 데이터가 보내질 서버 페이지 주소
+	method : 데이터 전송방식
+		- get : 데이터들이 주소표시줄에 표시됨
+		- post : 데이터들이 주소표시줄에 표시되지 않음
+	name : 서버에서 처리될 일종의 변수값, name=value&name=value...
+	id : 유일하게 구분되는 값					, CSS, 자바스크립트 사용하려고	
+	 -->
+	<form method="get" name ="form" id="form">  <!-- submit을 쓸려면 꼭 form을 써야함 -->
+	
+		이름 : <input type="text" name="name" id="name"><br />
+		비번 : <input type="password" name="password" id="password"><br />
+		파일찾기 : <input type="file" name="file" id="file"><br />
+
+		<input type="submit" value="전송">		
+		<input type="reset" value="취소">		
+	</form>
+</body>
+</html>
